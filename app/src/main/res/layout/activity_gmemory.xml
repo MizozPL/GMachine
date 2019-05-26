@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_memory_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        tools:context="com.mizoz.gmachine.GMemoryActivity">
+
+        <TextView
+            android:id="@+id/textview_memory_address"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="Address:"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/edittext_memory_address"
+            app:layout_constraintEnd_toStartOf="@+id/edittext_memory_address"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edittext_memory_address" />
+
+        <EditText
+            android:id="@+id/edittext_memory_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textview_memory_address"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edittext_memory_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/edittext_memory_address"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_memory_address" />
+
+        <TextView
+            android:id="@+id/textview_memory_value"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Value:"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/edittext_memory_value"
+            app:layout_constraintEnd_toStartOf="@+id/edittext_memory_address"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edittext_memory_value" />
+
+        <ImageButton
+            android:id="@+id/memory_write_imagebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:onClick="writeMemory"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_memory_value"
+            app:srcCompat="@drawable/ic_save" />
+
+        <ImageButton
+            android:id="@+id/memory_read_imagebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:onClick="readMemory"
+            app:layout_constraintEnd_toStartOf="@+id/memory_write_imagebutton"
+            app:layout_constraintTop_toTopOf="@+id/memory_write_imagebutton"
+            app:srcCompat="@drawable/ic_content_paste" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GMachine</string>
+    <string-array name="instruction_array">
+        <item>-</item>
+        <item>load</item>
+        <item>store</item>
+        <item>read</item>
+        <item>write</item>
+        <item>add</item>
+        <item>sub</item>
+        <item>mult</item>
+        <item>div</item>
+        <item>jump</item>
+        <item>jzero</item>
+        <item>jgtz</item>
+        <item>halt</item>
+    </string-array>
+</resources>
